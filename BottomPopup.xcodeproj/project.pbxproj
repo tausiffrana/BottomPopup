@@ -13,6 +13,9 @@
 		185980DC26E1E5F2004F210F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185980DA26E1E5F2004F210F /* Main.storyboard */; };
 		185980DE26E1E5F3004F210F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185980DD26E1E5F3004F210F /* Assets.xcassets */; };
 		185980E126E1E5F3004F210F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185980DF26E1E5F3004F210F /* LaunchScreen.storyboard */; };
+		1859810A26E1F925004F210F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859810926E1F925004F210F /* PopupViewController.swift */; };
+		1859811026E1F9EE004F210F /* CustomPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859810E26E1F9EE004F210F /* CustomPopupView.swift */; };
+		1859811126E1F9EE004F210F /* CustomPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859810F26E1F9EE004F210F /* CustomPopupView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		185980DD26E1E5F3004F210F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185980E026E1E5F3004F210F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185980E226E1E5F3004F210F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1859810926E1F925004F210F /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		1859810E26E1F9EE004F210F /* CustomPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupView.swift; sourceTree = "<group>"; };
+		1859810F26E1F9EE004F210F /* CustomPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPopupView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		185980D326E1E5F2004F210F /* BottomPopup */ = {
 			isa = PBXGroup;
 			children = (
-				185980D426E1E5F2004F210F /* AppDelegate.swift */,
-				185980D626E1E5F2004F210F /* SceneDelegate.swift */,
-				185980D826E1E5F2004F210F /* ViewController.swift */,
-				185980DA26E1E5F2004F210F /* Main.storyboard */,
+				1859811326E2036A004F210F /* Delegate Class */,
+				1859811426E2037E004F210F /* Storyboard */,
+				1859811526E2038E004F210F /* ViewController */,
+				1859810D26E1F9BF004F210F /* Custom Popup */,
+				1859810426E1F8F8004F210F /* Custom Class */,
 				185980DD26E1E5F3004F210F /* Assets.xcassets */,
-				185980DF26E1E5F3004F210F /* LaunchScreen.storyboard */,
 				185980E226E1E5F3004F210F /* Info.plist */,
 			);
 			path = BottomPopup;
+			sourceTree = "<group>";
+		};
+		1859810426E1F8F8004F210F /* Custom Class */ = {
+			isa = PBXGroup;
+			children = (
+				1859810926E1F925004F210F /* PopupViewController.swift */,
+			);
+			path = "Custom Class";
+			sourceTree = "<group>";
+		};
+		1859810D26E1F9BF004F210F /* Custom Popup */ = {
+			isa = PBXGroup;
+			children = (
+				1859810E26E1F9EE004F210F /* CustomPopupView.swift */,
+				1859810F26E1F9EE004F210F /* CustomPopupView.xib */,
+			);
+			path = "Custom Popup";
+			sourceTree = "<group>";
+		};
+		1859811326E2036A004F210F /* Delegate Class */ = {
+			isa = PBXGroup;
+			children = (
+				185980D426E1E5F2004F210F /* AppDelegate.swift */,
+				185980D626E1E5F2004F210F /* SceneDelegate.swift */,
+			);
+			path = "Delegate Class";
+			sourceTree = "<group>";
+		};
+		1859811426E2037E004F210F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				185980DA26E1E5F2004F210F /* Main.storyboard */,
+				185980DF26E1E5F3004F210F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1859811526E2038E004F210F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185980D826E1E5F2004F210F /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +175,7 @@
 			files = (
 				185980E126E1E5F3004F210F /* LaunchScreen.storyboard in Resources */,
 				185980DE26E1E5F3004F210F /* Assets.xcassets in Resources */,
+				1859811126E1F9EE004F210F /* CustomPopupView.xib in Resources */,
 				185980DC26E1E5F2004F210F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +189,9 @@
 			files = (
 				185980D926E1E5F2004F210F /* ViewController.swift in Sources */,
 				185980D526E1E5F2004F210F /* AppDelegate.swift in Sources */,
+				1859811026E1F9EE004F210F /* CustomPopupView.swift in Sources */,
 				185980D726E1E5F2004F210F /* SceneDelegate.swift in Sources */,
+				1859810A26E1F925004F210F /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trana.BottomPopup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trana.BottomPopup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
